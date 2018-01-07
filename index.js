@@ -7,7 +7,7 @@ var server = http.createServer();
 var io = socketio(server);
 var port = 3000;
 
-fs.readFile('../index.html', function (err, html) {
+fs.readFile('index.html', function (err, html) {
 	if(err){
 		throw err;
 	}
