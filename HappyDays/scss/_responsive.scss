@@ -1,0 +1,66 @@
+@media(max-width: 767px) {
+	html {
+		font-size: 8px;
+	}
+	.ca_under_construction {
+		.container-fluid {
+			&:before {
+				width: 100vw;
+			}
+			.col-md-6:first-child {
+				display: none;
+			}
+			.row {
+				.ca_txt {
+					height: 100vh;
+					.content {
+						padding: 15px;
+						background: rgba(255,255,255,0.75);
+						position: absolute;
+						width: 100%;
+						left: 0;
+						top: 50%;
+						transform: translate(0, -50%);
+						.container {
+							.row {
+								.img-block {
+									text-align: left;
+									margin-top: 15px;
+									margin-bottom: 15px;
+									img {
+										display: inline-block;
+									}
+								}
+								.icon-block {
+									margin-top: 0;
+									line-height: 1.7874rem;
+								}
+								.still {
+									margin-top: 10px;
+								}
+								.title {
+									font-size: 36px;
+									margin-top: 5px;
+									p {
+										line-height: 35px;
+									}
+								}
+								.email {
+									margin-top: 10px;
+									div {
+										input {
+											font-size: 12px;
+										}
+									}
+								}
+								.subtitle {
+									font-size: 12px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
