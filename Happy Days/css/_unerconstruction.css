@@ -1,0 +1,105 @@
+.ca_under_construction {
+  font-size: 0; }
+  .ca_under_construction .container-fluid {
+    position: relative; }
+    .ca_under_construction .container-fluid:before {
+      content: '';
+      display: block;
+      width: 50vw;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .ca_under_construction .container-fluid.first-screen:before {
+      background: url("../img/photo1.jpg") center center no-repeat;
+      background-size: cover; }
+    .ca_under_construction .container-fluid.second-screen:before {
+      background: url("../img/photo2.jpg") center center no-repeat;
+      background-size: cover; }
+    .ca_under_construction .container-fluid.third-screen:before {
+      background: url("../img/photo3.jpg") center center no-repeat;
+      background-size: cover; }
+    .ca_under_construction .container-fluid.fourth-screen:before {
+      background: url("../img/photo4.jpg") center center no-repeat;
+      background-size: cover; }
+    .ca_under_construction .container-fluid.fifth-screen:before {
+      background: url("../img/photo5.jpg") center center no-repeat;
+      background-size: cover; }
+    .ca_under_construction .container-fluid.sixth-screen:before {
+      background: url("../img/photo6.jpg") center center no-repeat;
+      background-size: cover; }
+    .ca_under_construction .container-fluid ._row {
+      min-height: 100vh; }
+      .ca_under_construction .container-fluid ._row .ca_txt .content {
+        padding-top: 100px;
+        padding-left: 7rem;
+        padding-right: 7rem; }
+        .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .img-block img {
+          width: 14.6875rem;
+          height: 6.14583rem; }
+        .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .icon-block {
+          display: flex;
+          justify-content: space-between; }
+          .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .icon-block a img {
+            width: 2.3125rem;
+            height: 2.36458rem;
+            color: #3769c9; }
+          .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .icon-block a:nth-child(2) {
+            margin-left: 3.125rem;
+            margin-right: 3.125rem; }
+        .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .still {
+          font-family: Sofia Pro;
+          font-size: 2.08333rem;
+          font-weight: bold;
+          letter-spacing: 0.302083rem;
+          text-transform: uppercase;
+          color: #252226;
+          margin-top: 16.1458rem; }
+        .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .title {
+          font-family: Playfair Display;
+          font-size: 6.66667rem;
+          font-weight: 900;
+          color: #252226;
+          overflow: visible; }
+          .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .title p {
+            margin: 0;
+            line-height: 1.3; }
+        .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .email {
+          margin-top: 4rem; }
+          .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .email div {
+            postion: relative; }
+            .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .email div input {
+              width: 100%;
+              height: 5.9375rem;
+              border: none;
+              border-radius: 3px;
+              background-color: #ffffff;
+              box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.05);
+              font-family: Sofia Pro;
+              font-size: 1.66667rem;
+              color: #362a3b;
+              padding-left: 3.33333rem;
+              padding-right: 15rem; }
+              .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .email div input::-webkit-input-placeholder {
+                color: #362a3b;
+                opacity: 0.4; }
+              .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .email div input::-moz-placeholder {
+                color: #362a3b;
+                opacity: 0.4; }
+            .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .email div a {
+              font-family: Sofia Pro;
+              font-size: 1.875rem;
+              font-weight: bold;
+              color: #3769c9;
+              position: absolute;
+              right: 6.77083rem;
+              top: 1.77083rem; }
+        .ca_under_construction .container-fluid ._row .ca_txt .content .container .row .subtitle {
+          margin-top: 2.39583rem;
+          font-family: Sofia Pro;
+          font-size: 1.45833rem;
+          font-weight: 300;
+          line-height: 1.64;
+          color: #59667d; }
+
+/*# sourceMappingURL=_unerconstruction.css.map */

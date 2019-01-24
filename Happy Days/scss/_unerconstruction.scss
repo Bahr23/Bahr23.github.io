@@ -1,0 +1,151 @@
+.ca_under_construction { //Класс выделяющий стили только для страницы nder construction
+	font-size: 0;//Убираем лишние отступы за счёт высоты строки у inline-block элементов
+	.container-fluid {
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			width: 50vw;
+			height: 100%;	//Какртинку менять инлайном в HTML через style="background-image: url();
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&.first-screen {
+			&:before {
+				background: url('../img/photo1.jpg') center center no-repeat;
+				background-size: cover;
+			}
+		}
+		&.second-screen {
+			&:before {
+				background: url('../img/photo2.jpg') center center no-repeat;
+				background-size: cover;
+			}
+		}
+		&.third-screen {
+			&:before {
+				background: url('../img/photo3.jpg') center center no-repeat;
+				background-size: cover;
+			}
+		}
+		&.fourth-screen {
+			&:before {
+				background: url('../img/photo4.jpg') center center no-repeat;
+				background-size: cover;
+			}
+		}
+		&.fifth-screen {
+			&:before {
+				background: url('../img/photo5.jpg') center center no-repeat;
+				background-size: cover;
+			}
+		}
+		&.sixth-screen {
+			&:before {
+				background: url('../img/photo6.jpg') center center no-repeat;
+				background-size: cover;
+			}
+		}
+		._row {
+			min-height: 100vh;
+			.ca_txt {
+				.content {
+					padding-top: 100px;
+					padding-left: 5.29134rem;
+					padding-right: 5.29134rem;
+					.container {
+						.row {
+							.img-block {
+								img {
+									width: 11.1024rem;
+  									height: 4.64567rem;
+								}
+							}
+							.icon-block {
+								display: flex;
+								justify-content: space-between;
+								a {
+									img {
+									width: 1.74803rem;
+									height: 1.7874rem;
+									color: #3769c9;
+								}
+								&:nth-child(2) {
+										margin-left: 2.3622rem;
+										margin-right: 2.3622rem;
+									}
+								}
+							}
+							.still {
+								font-family: Sofia Pro;
+								font-size: 1.5748rem;
+								font-weight: bold;
+								letter-spacing: 0.228346rem;
+								text-transform: uppercase;
+								color: #252226;
+								margin-top: 12.2047rem;
+							}
+							.title {
+								font-family: Playfair Display;
+								font-size: 5.03937rem;
+								font-weight: 900;
+								color: #252226;
+								overflow: visible;
+								p {
+									margin: 0;
+									line-height: 1.3;
+								}
+							}
+							.email {
+								margin-top: 3.02362rem;
+								div {
+									postion: relative;
+									input {
+										// width: 39.0551rem;
+										width: 100%;
+									  	height: 4.48819rem;
+									  	border: none;
+									  	border-radius: 3px;
+									  	background-color: #ffffff;
+									  	box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.05);
+									  	font-family: Sofia Pro;
+  										font-size: 1.25984rem; 
+  										color: #362a3b;
+  										padding-left: 2.51969rem;
+  										padding-right: 11.3386rem;
+  										&::-webkit-input-placeholder {
+										   	color: #362a3b;
+										   	opacity: 0.4;
+										} 
+										&::-moz-placeholder {
+											color: #362a3b;
+											opacity: 0.4;
+										}
+									}
+									a {
+										font-family: Sofia Pro;
+										font-size: 1.41732rem;
+										font-weight: bold;
+										color: #3769c9;
+										position: absolute;
+										right: 5.11811rem;
+										top: 1.33858rem;
+									}
+								}
+							}
+							.subtitle {
+								margin-top: 1.81102rem;
+								font-family: Sofia Pro;
+								font-size: 1.10236rem;
+								font-weight: 300;
+								line-height: 1.64;
+								color: #59667d;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

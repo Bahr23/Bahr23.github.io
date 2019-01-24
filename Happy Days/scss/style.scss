@@ -1,0 +1,21 @@
+@import 'rembase';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+input:focus {
+	outline: none;
+}
+
+body {
+	font-family: 'Arial';
+}
+
+// Сюда стили, которые будут переиспользоваться на всех страницах, если их больше одной
+@import 'fonts';
+
+@import 'unerconstruction';
+@import 'responsive';
+
