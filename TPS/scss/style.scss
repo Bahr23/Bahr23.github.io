@@ -1,0 +1,1039 @@
+@import "_fonts";
+
+html {
+	font-size: 1vw;
+	@media only screen and (max-width : 767px) {
+		font-size: 8px;
+	}
+}
+
+body {
+	min-width: 320px;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+div {
+	border: 0px solid red; 
+}
+
+ul {
+	padding: 0;
+	li {
+		list-style: none;
+	}
+}
+
+.main-screen {
+	background-image: url("../assets/img/bubbles.jpg");
+	background-repeat: no-repeat;
+   background-size: cover;
+	height: 50rem;
+	overflow: hidden;
+	position: relative;
+	@media only screen and (max-width : 767px) {
+		min-width: 100vw;
+	}
+	@media only screen and (max-width : 575px) {
+		height: auto;
+		padding-bottom: 2rem;
+	}
+	.icon {
+		position: absolute;
+		top: 2%;
+		right: 4%;
+		width: 5rem;
+		height: 5rem;
+		transform: translate (-50%, -50%);
+		cursor: pointer;
+		z-index: 99;
+		display: none;
+		border: 0px solid red;
+		@media only screen and (max-width : 767px) {
+			display: block;
+		}
+		@media only screen and (max-width : 575px) {
+			top: 5px;
+			right: 7.5px;
+		}
+		&.active {
+			position: fixed;
+		}
+		&.active .hamburger {
+			background-color: rgba(0,0,0,0);
+			box-shadow: 0 2px 5px rgba(0,0,0, 0);
+		}
+		&.active .hamburger::after {
+			top: 0;
+			transform: rotate(45deg);
+		}
+		&.active .hamburger::before {
+			top: 0;
+			transform: rotate(135deg);
+		}
+		.hamburger {
+			width: 70%;
+			min-height: 0.3rem;
+			background-color: #fff;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			box-shadow: 0 2px 5px rgba(0,0,0,.2);
+			transition: .5s;
+			border-radius: 15%;
+			&::after, &::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				min-height: 0.3rem;
+				background-color: #fff;
+				box-shadow: 0 2px 5px rgba(0,0,0,.2);
+				transition: .5s; 
+				border-radius: 15%;
+			}
+			&:before {
+				top: -1.25rem;
+			}
+			&:after {
+				top: 1.25rem;
+			}
+		}
+	}
+	.block {
+		width: 71.25rem;
+		margin: auto;
+		@media only screen and (max-width : 767px) {
+			max-width: 90%;
+		}
+		.header {
+			padding: 0;
+			margin: auto;
+			margin-top: 1.5rem;
+			.row {
+				.logo {
+					embed {
+						width: 9.5rem;
+						margin-left: 3px;
+					}
+					@media only screen and (max-width : 767px) {
+						position: absolute;
+						margin: 0;
+						top: 2%;
+						left: 2%;
+					}
+				}
+				width: 100%;
+				.menu {
+					margin-left: 8.125rem;
+					margin-right: 6.3125rem; 
+					padding: 0;
+					@media only screen and (max-width : 767px) {
+						display: none;
+					}
+					.container-fluid {
+						height: 100%;
+						padding: 0;
+						ul {
+							margin: 0;
+							margin-top: 1.875rem;
+							li {
+								display: inline;
+								text-align: center;
+								a {
+									color: #fff;
+									font-size: 0.9375rem;
+									font-family: 'Nunito', sans-serif;
+									position: relative;
+									&::after {
+									content: '';
+									width: 0;
+									height: 2px;
+									background-color: #3d64a0;
+									position: absolute;
+									top: 1.1rem;
+									left: 50%;
+									transition: 0.2s;
+									transition-delay: 0.1s;
+									z-index: 32;
+									}
+									&:hover{
+										&::after {
+											width: 100%;
+											left: 0;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			.nav-m {
+				position: fixed;
+				z-index: 30;
+				width: 100vw;
+				height: 100vh;
+				background-color: #2973BE;
+				transition: 0.5s;
+				top: -2000vh;
+				left: 0;
+				display: none;
+				@media only screen and (max-width : 767px) {
+						display: block;
+				}
+				&.active {
+					top: 0;
+				}
+				ul {
+					list-style: none;
+					margin-left: 7rem;
+					margin-top: 5rem;
+					li {
+						a {
+							font: {
+								family: "Nunito";
+								weight: 300;
+								size: 2.25rem;
+							}
+							color: #fff;
+							line-height: 3;
+							position: relative;
+							&::after {
+							content: '';
+							width: 0px;
+							height: 2px;
+							background-color: #51a0ef;
+							position: absolute;
+							top: 95%;
+							left: 50%;
+							transition: 0.2s;
+							transition-delay: 0.1s;
+							z-index: 32;
+							}
+							&:hover{
+								&::after {
+									left: 5%;
+									width: 90%;
+								}
+							} 
+						}						
+					}
+				}	
+				hr {
+					width: 50%;
+					margin-left: 6rem;
+					background-color: #fcfcfc;
+				}
+				.phone-m {
+					position: relative;
+					margin-left: 7rem;
+					.title {
+						font-family: 'Raleway', sans-serif;
+						color: #b0ceff;
+						font-size: 	1.5rem;
+					}
+					embed {
+						width: 1.125rem;
+						position: absolute;
+						left: -1.5rem;
+						top: 1.75rem;
+					}
+					.phone-number {
+						font-family: 'Raleway', sans-serif;
+						color: #b0ceff;
+						font-size: 	2rem;
+						transition: 0.2s;
+						&:hover {
+							color: #fff;
+						}
+					}
+				}
+				@media only screen and (max-width : 575px) {
+					width: 100%;
+					height: 100%;
+				}
+			}
+				.phone {
+					padding: 0;
+					position: relative;
+					@media only screen and (max-width : 767px) {
+						display: none;
+					}
+					.title {
+						font-family: 'Raleway', sans-serif;
+						color: #b0ceff;
+						font-size: 	1.1rem;
+						margin-top: 0.9375rem;
+					}
+					embed {
+						width: 1.125rem;
+						position: absolute;
+						top: 2.2rem;
+						left: -1.7rem;
+					}
+					.phone-number {
+						font-family: 'Raleway', sans-serif;
+						color: #b0ceff;
+						font-size: 	1.875rem;
+						transition: 0.2s;
+						&:hover {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+		.header-content {
+			margin-top: 5.9375rem;
+			@media only screen and (max-width : 767px) {
+				margin-top: 9rem;
+				.container-fluid {
+					.row {
+						.text {
+							text-align: center;
+						}
+					}
+				}
+			}
+			.container-fluid {
+				.row {
+					justify-content: space-between;
+					.text {
+						padding: 0;
+						h2 {
+							font: {
+								family: "Nunito";
+								weight: bold;
+								size: 2.875rem;
+							}
+							color: #fff;
+							@media only screen and (max-width : 767px) {
+								font-size: 3rem;
+							}
+							@media only screen and (max-width : 480px) {
+								font-size: 3.25rem;
+							}
+						}
+						p {
+							font: {
+								family: "Raleway";
+								weight: 300;
+								size: 1.1875rem;
+							}
+							color: #fff;
+							margin-top: 4rem;
+							@media only screen and (max-width : 767px) {
+								margin-top: 0;
+							}
+							@media only screen and (max-width : 576px) {
+							
+							}
+						}
+					}
+				.vimeo {
+					iframe {
+						width: 37.5rem;
+						height: 21.875rem;
+						margin: auto;
+					}
+					@media only screen and (max-width : 767px) {
+						width: 100%;
+						display: flex;
+						}
+					}
+				}
+				form {
+					width: 100%;
+					margin-top: 5.125rem;
+					.col-sm-9 {
+						padding: 0;
+						height: 3.125rem;
+						display: flex;
+						justify-content: space-between;
+						input[type="text"] {
+							border: none;
+							outline:none;
+							font: {
+								family: "Nunito";
+								weight: 400;
+								size: 1.125rem;
+							}
+							letter-spacing: 0.1rem;
+							background-color: transparent;
+							color: #f1f7ff;
+							border-bottom: 0.125rem solid #4bc871;
+							text-align: center;
+							width: 10.3125rem;
+							font: {
+								family: "Raleway";
+								weight: bold;
+								size: 0.9375rem;
+							}
+ 							&:focus {
+								border-bottom-color: #4ed877;
+							}
+							&::-webkit-input-placeholder {
+							   color: #b6d4ff;
+							} 
+							&::-moz-placeholder {
+								color: #b6d4ff;
+							}
+						}
+					}
+					.col-sm-auto {
+						padding: 0;
+						button {
+							background-color: #3fb061;
+							border: none;
+							outline: none;
+							transition: 0.1s;
+							&:hover {
+								cursor: pointer;
+								background-color: #43be68;
+							}
+							font: {
+								family: "Raleway";
+								weight: bold;
+								size: 0.9375rem;
+							}
+							color: #fff;
+							width: 13.9375rem;
+							height: 3.125rem;
+						}
+					}
+					@media only screen and (max-width : 767px) {
+						margin-top: 3rem;
+						.col-sm-9 {
+							input[type="text"] {
+								&::-webkit-input-placeholder {
+							   	font-size: 1.2rem;
+								} 
+								&::-moz-placeholder {
+									font-size: 1.2rem;
+								}
+							}
+						}
+					}
+				}
+			}
+			@media only screen and (max-width : 576px) {
+				.container-fluid {
+					.row {
+						.text {	
+							h2 {
+								font-size: 2.5rem;
+							}
+						}
+						.vimeo {
+							iframe {
+								width: 35.5rem;
+								height: auto;
+								margin: auto;
+							}
+						}
+					}
+					form {
+						.row {
+							.col-sm-9 {
+								justify-content: space-between;
+								align-items: center;
+								flex-direction: column;
+								height: auto;
+								input[type="text"] {
+									width: 15rem;
+									margin-bottom: 2rem;
+									text-align: left;
+									padding-left: 0.5rem;
+									padding-bottom: 0.5rem;
+								}
+							}
+							.col-12 {
+								display: flex;
+								button {
+									margin: auto;
+									width: 15rem;
+									letter-spacing: 0.2rem;
+								}
+							}
+						}
+					}
+				}	
+			}
+		}
+	}
+}
+
+.can-use {
+	@media only screen and (max-width : 767px) {
+		min-width: 100vw;
+	}
+	.container-fluid {
+		.row {
+		height: 32.375rem;
+			div {
+				background-color: #eaf4ff;
+				text-align: center;
+				h3 {
+					font: {
+						family: "Nunito";
+						weight: bold;
+						size: 1.0625rem;
+					}
+					margin-bottom: 2.1875rem;
+					margin-top: 1.9375rem;
+				}
+				p {
+					font: {
+						family: "Raleway";
+						weight: 300;
+						size: 1rem;
+					}
+					width: 22.375rem;
+					margin: auto;
+				}
+				embed {
+					width: 3.125rem;
+					margin-top: 10.25rem;
+				}
+				@media only screen and (max-width : 767px) {
+					h3 {
+						font-size: 1.4rem;
+						margin-bottom: 0.5rem;
+					}
+					p {
+						font-size: 1.25rem;
+					}
+					embed {
+						margin-top: 7rem;
+					}
+				}
+			}
+			div:nth-child(even) {
+				background-color: #f5faff;
+				position: relative;
+				h2 {
+					font: {
+						family: "Nunito";
+						weight: 600;
+						size: 0.875rem;
+					}
+					color: #405fa7;
+					position: absolute;
+					top: 5.6875rem;
+					left: 0;
+					width: 100%;
+					text-align: center;
+					letter-spacing: 0.1rem;
+				}
+				@media only screen and (max-width : 767px) {
+					h2 {
+						top: 4rem;
+					}
+				}
+			}
+		}
+	}
+	@media only screen and (max-width : 575px) {
+		.container-fluid {
+			.row {
+				height: auto;
+				div {
+					padding-bottom: 1rem;
+					min-height: 20rem;
+					embed {
+						margin-top: 3rem;
+					}
+					h3 {
+						margin-top: 1rem;
+						margin-bottom: 0.25rem;
+					}
+					p {
+						width: 80%;
+					}
+					&:nth-child(even) {
+						embed {
+							margin-top: 5rem;
+						}
+						h2 {
+							top: 2rem;
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.we-are {
+	.block {
+		width: 71.25rem;
+		margin: auto;
+		padding-top: 8.125rem;
+		@media only screen and (max-width : 767px) {
+			max-width: 90%;
+		}
+		.description {
+			text-align: center;
+			h4 {
+				font: {
+					family: "Nunito";
+					weight: 600;
+					size: 0.875rem;
+				}
+				color: #405fa7;
+			}
+			h2 {
+				font: {
+					family: "Nunito";
+					weight: 300;
+					size: 2.25rem;
+				}
+				color: #444444;
+			}
+			hr {
+				width: 3.75rem;
+				background-color: #3fb061;
+			}
+			p {
+				font: {
+					family: "Raleway";
+					weight: 300;
+					size: 1.0625rem;
+				}
+				color: #666666;
+			}
+			@media only screen and (max-width : 767px) {
+				h2 {
+					font-size: 2.5rem;
+				}
+				h4 {
+					font-size: 1rem;
+				}
+				p {
+					font-size: 1.5rem;
+				}
+			}
+		}
+		.container-fluid {
+			.row {
+				div {
+					img {
+						width: 34.625rem;
+						height: 22.5rem;
+					 }
+					h2 {
+						font: {
+							family: "Raleway";
+							weight: normal;
+							size: 1.25rem;
+						}
+						color: #444444;
+						margin-top: 2.6875rem;
+						text-align: center;
+					}
+					p {
+						font: {
+							family: "Raleway";
+							weight: 300;
+							size: 1.0625rem;
+						}
+						color: #666666;
+						margin-left: 1.875rem;
+						margin-right: 1.875rem; 
+					}
+					span {
+						width: 100%;
+						display: flex;
+						button {
+							font: {
+								family: "Nunito";
+								weight: normal;
+								size: 0.75rem;
+							}
+							color: #ededed;
+							border: none;
+							outline: none;
+							background-color: #405fa7;
+							width: 5.625rem;
+							height: 1.5rem;
+							margin: auto;
+							margin-top: 1.125rem;
+							transition: 0.1s;
+							&:hover {
+								cursor: pointer;
+								background-color: #476dc6;
+							}
+						}
+					}
+					hr {
+						width: 34.375rem;
+						height: 0.125rem;
+						background-color: #dae0ed;
+					}
+					@media only screen and (max-width : 767px) {
+						display: flex;
+						flex-direction: column;
+						margin-top: 3rem;
+						img {
+							width: 100%;
+							height: auto;
+							margin-top: 1.75rem;
+						}
+						h2 {
+							font-size: 2rem;
+							order: -3;
+						}
+						p {
+							font-size: 1.5rem;
+							margin-top: 2rem;
+						}
+						hr {
+							order: -2;
+							width: 70%;
+							height: 0.125rem;
+						}
+						span {
+							order: -1;
+							button {
+								width: 12rem;
+								height: 3rem;
+								font-size: 1.25rem;
+							}
+						}
+					}
+					&:last-child {
+						margin-bottom: 5rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.cta {
+	background-image: url("../assets/img/footer-bg.jpg");
+	background-repeat: no-repeat;
+   background-size: cover;
+   height: 25.625rem;
+   @media only screen and (max-width : 767px) {
+		min-width: 100vw;
+	}
+	.block {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		@media only screen and (max-width : 767px) {
+			max-width: 100%;
+		}
+		h2 {
+			font: {
+				family: "Nunito";
+				weight: 600;
+				size: 0.875rem;
+				}
+			color: #fff;
+			margin-top: 5.625rem;
+			letter-spacing: 0.2rem;
+		}
+		p {
+			font: {
+				family: "Raleway";
+				weight: 300;
+				size: 1.0625rem;
+				}
+			color: #fff;
+			width: 46.875rem;
+			margin: auto;
+			margin-top: 3.875rem;
+			margin-bottom: 3.375rem;
+			padding-left: 3.125rem;
+			padding-right: 3.125rem;
+		}
+		button {
+			background-color: #3fb061;
+			border: none;
+			outline: none;
+			transition: 0.1s;
+			&:hover {
+				cursor: pointer;
+				background-color: #43be68;
+				}
+			font: {
+				family: "Raleway";
+				weight: bold;
+				size: 0.9375rem;
+			}
+			color: #fff;
+			width: 22.375rem;
+			height: 3.125rem;
+			margin: auto;
+		}
+	}
+	@media only screen and (max-width : 767px) {
+		.block {
+			h2 {
+				font-size: 1.5rem;
+			}
+			p {
+				font-size: 1.3rem;
+			}
+			button {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	@media only screen and (max-width : 575px) {
+		.block {
+			p {
+				width: 80%;
+				margin-top: 1rem;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
+
+.footer {
+	background-color: #222222;
+	height: 43.75rem;
+	@media only screen and (max-width : 767px) {
+		min-width: 100%;
+		height: auto;
+		padding-bottom: 3rem;
+	}
+	.block {
+		width: 71.25rem;
+		margin: auto;
+		@media only screen and (max-width : 767px) {
+			max-width: 90%;
+		}
+		.container-fluid {
+			padding: 0;
+			.row {
+				h3 {
+					font: {
+						family: "Nunito";
+						weight: bold;
+						size: 0.875rem;
+					}
+					color: #fff;
+					text-transform: uppercase;
+					letter-spacing: 0.2rem;
+					@media only screen and (max-width : 767px) {
+						font-size: 1rem;
+					}
+				}
+				.guide {
+					embed {
+						width: 4.6875rem;
+						height: auto;
+						margin-top: 3.5625rem;
+					}
+					h3 {
+						margin-top: 3.8125rem;
+						margin-bottom: 2.6875rem;
+						width: 14.5rem;
+					}
+					form {
+						width: 14.5rem;
+						input[type="text"] {
+							border: none;
+							outline:none;
+							font: {
+								family: "Nunito";
+								weight: 400;
+								size: 1.125rem;
+							}
+							color: #aaaaaa;
+							text-align: center;
+							background-color: transparent;
+							color: #f1f7ff;
+							border-bottom: 0.125rem solid #fff;
+							text-align: left;
+							padding-bottom: 1.0625rem;
+							width: 14.5rem;
+							&:focus {
+								border-bottom-color: #4ed877;
+							}
+							&::-webkit-input-placeholder {
+							   	color: #aaaaaa;
+							} 
+							&::-moz-placeholder {
+								color: #aaaaaa;
+							}
+							&:last-child {
+								margin-top: 2.375rem;
+								margin-bottom: 1.8125rem;
+							}
+						}
+					}
+					button {
+						background-color: #3fb061;
+						border: none;
+						outline: none;
+						transition: 0.1s;
+						&:hover {
+							cursor: pointer;
+							background-color: #43be68;
+							}
+						font: {
+							family: "Raleway";
+							weight: bold;
+							size: 0.8125rem;
+						}
+						color: #fff;
+						width: 14.5rem;
+						height: 3.125rem;
+						margin: auto;
+					}
+				}
+				.about {
+					h3 {
+						margin-top: 5.625rem;
+						margin-bottom: 1.75rem;
+					}
+					p {
+						font: {
+							family: "Raleway";
+							weight: 300;
+							size: 1rem;
+						}
+						color: #dadada;
+						&:nth-child(odd) {
+							margin-top: 1.6875rem;
+							margin-bottom: 1.6875rem;
+						}
+					}
+					hr {
+						background-color: #3da75d;
+						width: 28.5rem;
+						margin-top: 4.4375rem;
+					}
+					embed {
+						width: 2rem;
+						height: auto;
+						margin-right: 1.8125rem; 
+					}
+					@media only screen and (max-width : 767px) {
+						p {
+							font-size: 1.2rem;
+						}
+					}
+				}
+				.info {
+					h3 {
+						margin-top: 2.5rem;
+						margin-bottom: 1.3125rem;
+					}
+					p {
+						font: {
+							family: "Raleway";
+							weight: 300;
+							size: 0.875rem;
+						}
+						color: #dadada;
+						margin: 0;
+					}
+
+					div {
+						margin: 0;
+					}
+					.care {
+						h3 {
+							margin-top: 5.625rem;
+						}
+					}
+					.address {
+						p:nth-child(7) {
+							margin-top: 2.0625rem;
+						}
+						.p-m {
+							display: none;
+						}
+					}
+					.hours {
+						@media only screen and (max-width : 767px) {
+							margin-bottom: 3.5625rem;
+						}
+					}
+					@media only screen and (max-width : 767px) {
+						p {
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+		}
+		@media only screen and (max-width : 575px) {
+			overflow: hidden;
+			.container-fluid {
+				.row {
+					.guide {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						align-items: center;
+						embed {
+							margin-top: 1.5rem;
+							margin-bottom: 1.5rem;
+							height: 38px;
+						}
+						h3 {
+							margin: 0;
+							margin-bottom: 1rem;
+						}
+						form {
+							margin: 0;
+						}
+						button {
+							margin: 0;
+						}
+					}
+					.about {
+						margin-top: 3rem;
+						h3 {
+							margin-top: 0;
+						}
+						hr {
+							margin-top: 0;
+							width: 100%;
+						}
+					}
+					.info {
+						display: flex;
+						justify-content: space-between;
+						margin-top: 1rem;
+						h3 {
+								margin-top: 0;
+								font-size: 1rem;
+						}
+						.care {
+							h3 {
+								margin-top: 0;
+							}
+						} 
+						.address {
+							p {
+								display: none;
+							}
+							.p-m {
+								display: block;
+								max-width: 15rem;
+							}
+						}
+						.email {
+							padding-right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
